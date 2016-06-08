@@ -619,6 +619,8 @@ Function* Compiler::compFn(FuncDeclNode *fdn){
 
         builder.SetInsertPoint(&f->back());
         
+        if(!v) return 0;
+
         //llvm requires explicit returns, so generate a void return even if
         //the user did not in their void function.
         if(retNode->type == TT_Void && !dynamic_cast<ReturnInst*>(v->val)){

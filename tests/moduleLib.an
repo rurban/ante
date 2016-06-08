@@ -21,3 +21,5 @@ ext i32,i32
 
     fun print: i32,i32 tup
         printf("(%d, %d)\n", tup[0], tup[1])
+
+
